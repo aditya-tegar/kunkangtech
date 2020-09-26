@@ -1,6 +1,6 @@
 @extends('adminlte.layouts.app')
 
-@section('title', 'List Order')
+@section('title', 'Daftar Order')
 
 {{-- Custom CSS --}}
 @push('css')
@@ -14,7 +14,7 @@
 	<div class="col-md-12">
 		<div class="card">
 		    <div class="card-header">
-		        <h3 class="card-title">List Order</h3>
+		        <h3 class="card-title">Daftar Order</h3>
 		    </div>
 		    <div class="card-body">
 		    	{{-- @include('partial.alert') --}}

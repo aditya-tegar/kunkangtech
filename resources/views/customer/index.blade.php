@@ -14,12 +14,12 @@
 	<div class="col-md-12">
 		<div class="card">
 		    <div class="card-header">
-		        <h3 class="card-title">Daftar Pelaggan</h3>
+		        <h3 class="card-title">Daftar Pelanggan</h3>
 		    </div>
 		    <div class="card-body">
 		    	{{-- @include('partial.alert') --}}
 		    	<p>
-		    		<a href="{{ route('customer.create') }}" class="btn btn-primary">Tambah Data Customer</a>
+		    		<a href="{{ route('customer.create') }}" class="btn btn-primary">Tambah Data Pelanggan</a>
 		    	</p>
 		    	<table class="table" id="example1">
 		    		<thead>

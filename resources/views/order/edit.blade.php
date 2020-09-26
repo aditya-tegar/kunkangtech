@@ -1,6 +1,6 @@
 @extends('adminlte.layouts.app')
 
-@section('title', 'Edit Customer')
+@section('title', 'Edit Order')
 
 {{-- Custom CSS --}}
 @push('css')
@@ -77,7 +77,14 @@
                         <label for="unit_barang" class="col-md-3 col-form-label text-md-right">{{ __('Unit Barang') }}</label>
 
                         <div class="col-md-7">
-                            <input id="unit_barang" type="number" name="unit_barang" class="form-control @error('unit_barang') is-invalid @enderror" name="unit_barang" value="{{ $order->unit_barang }}" required autocomplete="unit_barang" autofocus>
+                            <select class="form-control selec2bs4" name="unit_barang" id="unit_barang">
+                                <option value="Pilih">Pilih</option>
+                                <option value="Kg">Kg</option>
+                                <option value="Pcs">Pcs</option>
+                                <option value="Prs">Prs</option>
+                              </select>
+                        </div>
+                    </div>
 
                             @error('unit_barang')
                                 <span class="invalid-feedback" role="alert">
@@ -90,7 +97,7 @@
                     <div class="form-group row mb-0">
                         <div class="col-md-6 offset-md-3">
                             <button type="submit" class="btn btn-primary">
-                                {{ __('Update') }}
+                                {{ __('Ubah') }}
                             </button>
                         </div>
                     </div>
