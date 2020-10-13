@@ -7,9 +7,7 @@
     <div class="card-header">
         <h3 class="card-title">Visi Misi PT. KUM KANG TECH INDONESIA</h3>
         {{-- {{Auth::user()->role}} --}}
-        @if (Auth::user()->role_id == 1)
-            
-        @endif
+        
     </div>
     <div class="card-body">
         @if (session('status'))
