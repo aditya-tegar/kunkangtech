@@ -17,6 +17,26 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+               @if (Auth::user()->role_id == 1)
+               <li class="nav-item">
+                <a href="{{ route('barang.index') }}" class="nav-link">
+                    <i class="nav-icon fas fa-box"></i>
+                    <p> Data Barang </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('customer.index') }}" class="nav-link">
+                    <i class="nav-icon fas fa-users"></i>
+                    <p> Data Customer </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('order.index') }}" class="nav-link">
+                    <i class="nav-icon fas fa-shopping-cart"></i>
+                    <p> Data Order </p>
+                </a>
+            </li>
+                @endif
                 <li class="nav-item">
                     <a href="{{ route('home') }}" class="nav-link">
                         <i class="nav-icon fas fa-home"></i>
@@ -24,24 +44,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a href="{{ route('barang.index') }}" class="nav-link">
-                        <i class="nav-icon fas fa-box"></i>
-                        <p> Data Barang </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('customer.index') }}" class="nav-link">
-                        <i class="nav-icon fas fa-users"></i>
-                        <p> Data Customer </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('order.index') }}" class="nav-link">
-                        <i class="nav-icon fas fa-shopping-cart"></i>
-                        <p> Data Order </p>
-                    </a>
-                </li>
+                
                 <li class="nav-item">
                     <a href="{{ route('laporan') }}" class="nav-link">
                         <i class="nav-icon fas fa-file-alt"></i>
