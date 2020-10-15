@@ -64,7 +64,7 @@
         <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Role</label>
 
         <div class="col-md-6">
-            <select name="role" class="form-control">
+            <select name="role_id" class="form-control">
                 <option value="1">Admin</option>
                 <option value="2">Kepala Bagian</option>
             </select>
