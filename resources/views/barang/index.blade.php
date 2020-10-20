@@ -17,10 +17,12 @@
 		        <h3 class="card-title">Daftar Barang</h3>
 		    </div>
 		    <div class="card-body">
-		    	{{-- @include('partial.alert') --}}
+				{{-- @include('partial.alert') --}}
+				@if (Auth::user()->role_id == 1)
 		    	<p>
 		    		<a href="{{ route('barang.create') }}" class="btn btn-primary">Tambah Data Barang</a>
-		    	</p>
+				</p>
+				@endif
 		    	<table class="table" id="example1">
 		    		<thead>
 		    			<tr>
