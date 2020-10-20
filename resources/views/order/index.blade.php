@@ -34,8 +34,10 @@
 							<th>Nama Barang</th>
                             <th>Qty Barang</th>
                             <th>Harga Barang</th>
-                            <th>Unit Barang</th>
-		    				<th>Opsi</th>
+							<th>Unit Barang</th>
+							@if (Auth::user()->role_id == 1)
+							<th>Opsi</th>
+							@endif
 		    			</tr>
 		    		</thead>
 		    		<tbody>
@@ -51,7 +53,8 @@
 							<td>{{ $data->barang->nama_barang }}</td>
                             <td>{{ $data->qty_barang }}</td>
                             <td>{{ $data->barang->harga_barang }}</td>
-                            <td>{{ $data->unit_barang }}</td>
+							<td>{{ $data->unit_barang }}</td>
+							@if (Auth::user()->role_id == 1)
 		    				<td>
 								<a class="btn btn-warning btn-sm" href="{{ route('order.edit', $data->id) }}" data-toggle="tooltip" title="Edit">
 									<i class="fas fa-pencil-alt"></i>
@@ -66,6 +69,7 @@
 									@method('DELETE')
 								</form>
 							</td>
+							@endif
 		    			</tr>
 		    			@endforeach
 		    		</tbody>

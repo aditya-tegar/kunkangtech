@@ -29,8 +29,10 @@
                             <th>Kode Barang</th>
 		    				<th>Nama Barang</th>
 		    				<th>Jenis Barang</th>
-		    				<th>Harga Barang</th>
-		    				<th>Opsi</th>
+							<th>Harga Barang</th>
+							@if (Auth::user()->role_id == 1)
+							<th>Opsi</th>
+							@endif
 		    			</tr>
 		    		</thead>
 		    		<tbody>
@@ -41,7 +43,8 @@
 		    				<td>{{ $data->kode_barang }}</td>
 		    				<td>{{ $data->nama_barang }}</td>
 		    				<td>{{ $data->jenis_barang }}</td>
-		    				<td>{{ $data->harga_barang }}</td>
+							<td>{{ $data->harga_barang }}</td>
+							@if (Auth::user()->role_id == 1)
 		    				<td>
 								<a class="btn btn-warning btn-sm" href="{{ route('barang.edit', $data->id) }}" data-toggle="tooltip" title="Edit">
 									<i class="fas fa-pencil-alt"></i>
@@ -56,6 +59,7 @@
 									@method('DELETE')
 								</form>
 							</td>
+							@endif
 		    			</tr>
 		    			@endforeach
 		    		</tbody>

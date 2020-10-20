@@ -33,8 +33,10 @@
 							<th>Nama Barang</th>
                             <th>Jumlah Barang</th>
                             <th>Harga Barang</th>
-                            <th>Unit Barang</th>
-		    				<th>Opsi</th>
+							<th>Unit Barang</th>
+							@if (Auth::user()->role_id == 1)
+							<th>Opsi</th>
+							@endif
 		    			</tr>
 		    		</thead>
 		    		<tbody>

@@ -29,8 +29,10 @@
                             <th>Nama Pelanggan</th>
 		    				<th>No Telepon</th>
 		    				<th>Alamat</th>
-		    				<th>Email</th>
-		    				<th>Opsi</th>
+							<th>Email</th>
+							@if (Auth::user()->role_id == 1)
+							<th>Opsi</th>
+							@endif
 		    			</tr>
 		    		</thead>
 		    		<tbody>
@@ -41,7 +43,8 @@
 		    				<td>{{ $data->nama_customer }}</td>
 		    				<td>{{ $data->no_telepon }}</td>
 		    				<td>{{ $data->alamat }}</td>
-		    				<td>{{ $data->email }}</td>
+							<td>{{ $data->email }}</td>
+							@if (Auth::user()->role_id == 1)
 		    				<td>
 								<a class="btn btn-warning btn-sm" href="{{ route('customer.edit', $data->id) }}" data-toggle="tooltip" title="Edit">
 									<i class="fas fa-pencil-alt"></i>
@@ -56,6 +59,7 @@
 									@method('DELETE')
 								</form>
 							</td>
+							@endif
 		    			</tr>
 		    			@endforeach
 		    		</tbody>
