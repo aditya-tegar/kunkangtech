@@ -51,7 +51,7 @@
 								<a class="btn btn-warning btn-sm" href="{{ route('customer.edit', $data->id) }}" data-toggle="tooltip" title="Edit">
 									<i class="fas fa-pencil-alt"></i>
 								</a>
-								<a class="btn btn-danger btn-sm" href="#"
+								{{-- <a class="btn btn-danger btn-sm" href="#"
 									onclick="event.preventDefault();document.getElementById('delete-form').submit();">
 									<i class="fas fa-trash"></i>
 								</a>
@@ -59,7 +59,7 @@
 								<form id="delete-form" action="{{ route('customer.destroy', $data->id) }}" method="POST" style="display: none;">
 									@csrf
 									@method('DELETE')
-								</form>
+								</form> --}}
 							</td>
 							@endif
 		    			</tr>
