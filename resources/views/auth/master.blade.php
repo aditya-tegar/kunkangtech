@@ -23,7 +23,7 @@
 <body class="hold-transition login-page">
   <div class="login-box">
     <div class="login-logo">
-      <a href="#"><b>Laravel</b></a>
+      <a href="#"><b>PT. Kum Kang Tech</b></a>
     </div>
     <!-- /.login-logo -->
     <div class="card">
