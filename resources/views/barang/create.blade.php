@@ -62,7 +62,7 @@
                         <label for="harga_barang"  class="col-md-3 col-form-label text-md-right">{{ __('Harga Barang') }}</label>
 
                         <div class="col-md-7">
-                            <input id="harga_barang" type="number" name="harga_barang" class="form-control @error('harga_barang') is-invalid @enderror" name="jenis_barang" value="{{ old('jenis_barang') }}" required autocomplete="jenis_barang" autofocus>
+                            <input id="harga_barang" type="number" name="harga_barang" class="form-control @error('harga_barang') is-invalid @enderror" name="harga_barang" value="{{ old('harga_barang') }}" required autocomplete="harga_barang" autofocus>
 
                             @error('harga_barang')
                                 <span class="invalid-feedback" role="alert">
@@ -71,6 +71,21 @@
                             @enderror
                         </div>
                     </div>
+
+                    <div class="form-group row">
+                        <label for="keterangan"  class="col-md-3 col-form-label text-md-right">{{ __('Keterangan') }}</label>
+
+                        <div class="col-md-7">
+                            <input id="keterangan" type="text" name="keterangan" class="form-control @error('keterangan') is-invalid @enderror" name="keterangan" value="{{ old('keterangan') }}" required autocomplete="keterangan" autofocus>
+
+                            @error('keterangan')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                    </div>
+
                     <div class="form-group row mb-0">
                         <div class="col-md-6 offset-md-3">
                             <button type="submit" class="btn btn-primary">

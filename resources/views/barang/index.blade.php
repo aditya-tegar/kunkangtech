@@ -32,6 +32,7 @@
 		    				<th>Nama Barang</th>
 		    				<th>Jenis Barang</th>
 							<th>Harga Barang</th>
+							<th>Keterangan</th>
 							@if (Auth::user()->role_id == 1)
 							<th>Opsi</th>
 							@endif
@@ -46,6 +47,7 @@
 		    				<td>{{ $data->nama_barang }}</td>
 		    				<td>{{ $data->jenis_barang }}</td>
 							<td>{{ $data->harga_barang }}</td>
+							<td>{{ $data->keterangan }}</td>
 							@if (Auth::user()->role_id == 1)
 		    				<td>
 								<a class="btn btn-warning btn-sm" href="{{ route('barang.edit', $data->id) }}" data-toggle="tooltip" title="Edit">

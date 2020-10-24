@@ -32,6 +32,7 @@ class BarangController extends Controller
         $barang->nama_barang = $request->nama_barang;
         $barang->jenis_barang = $request->jenis_barang;
         $barang->harga_barang = $request->harga_barang;
+        $barang->keterangan = $request->keterangan;
         $barang->save();
 
         return redirect()->route('barang.index')->with('status','Barang updated!')->with('success', true);
